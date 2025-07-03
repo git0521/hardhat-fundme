@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fund Me 应用 | 区块链众筹平台</title>
+        <link rel="stylesheet" href="https://unpkg.com/element-plus/lib/index.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <i class="fa fa-connectdevelop header-icon"></i>
+                <div class="header-title">Fund Me 应用</div>
+            </div>
+
+            <div id="statusMessage" class="status-message"></div>
+
+            <div class="balance-card">
+                <div class="balance-title">
+                    <i class="fa fa-balance-scale text-primary space-x-2"></i>
+                    合约余额
+                </div>
+                <div class="flex-center justify-between">
+                    <div id="balanceDisplay" class="balance-value">0 ETH</div>
+                    <button id="balanceButton" class="btn btn-text">
+                        <i class="fa fa-refresh space-x-2"></i> 刷新余额
+                    </button>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button id="connectButton" class="btn btn-primary">
+                    <i class="fa fa-wallet space-x-2"></i> 连接钱包
+                </button>
+                <button id="withdrawButton" class="btn btn-danger">
+                    <i class="fa fa-credit-card space-x-2"></i> 提取资金
+                </button>
+            </div>
+
+            <div class="form-group">
+                <label for="ethAmount" class="form-label">资助金额 (ETH)</label>
+                <input
+                    id="ethAmount"
+                    type="number"
+                    placeholder="0.1"
+                    class="form-input"
+                    min="0.01"
+                    step="0.01"
+                />
+            </div>
+
+            <button id="fundButton" class="btn btn-success w-100">
+                <i class="fa fa-plus-circle space-x-2"></i> 资助项目
+            </button>
+        </div>
+
+        <script src="./index.js" type="module"></script>
+    </body>
+</html>
